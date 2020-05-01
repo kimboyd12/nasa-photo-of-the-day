@@ -4,7 +4,6 @@ import styled from 'styled-components';
 const Container = styled.div`
     width: 100%;
     margin: 0 auto;
-
 `
 
 const Header = styled.h1`
@@ -25,6 +24,7 @@ const Picture = styled.img`
     margin: 0 auto;
     margin-top: 30px;
     box-shadow: 10px 10px 8px #888888;
+    border-radius: 5px;
 `
 
 const Date = styled.h3`
@@ -49,7 +49,14 @@ const Info = styled.p`
     margin: 0 auto;
 `
 
-
+const Button = styled.button`
+    color: #0B3D91;
+    font-size: 1em;
+    margin: 1em;
+    padding: 0.25em 1em;
+    border: 2px solid #FC3D21;
+    border-radius: 3px;
+    `
 
 const PhotoComponent = props => {
     return (
@@ -59,7 +66,9 @@ const PhotoComponent = props => {
             <Date>{props.date}</Date>
             <Title>{props.title}</Title>
             <Info>{props.explanation}</Info>
-           
+            <a href="https://www.nasa.gov/">
+            <Button >Visit NASA.gov</Button>
+            </a>
         </Container>
     )
 }
